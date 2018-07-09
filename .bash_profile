@@ -12,7 +12,7 @@ export PATH
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Hack for intellij
-if ps -p$PPID | grep login; then
+if (ps -p$PPID | grep gnome-terminal) || (ps -p$PPID | grep login); then
 	tmx main
 else
 	tmx intellij
