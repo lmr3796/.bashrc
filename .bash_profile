@@ -9,10 +9,11 @@ fi
 
 PATH=$HOME/.local/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH
 export PATH
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)    # for mac
 
 # Hack for intellij
-if (ps -p$PPID | grep gnome-terminal) || (ps -p$PPID | grep login); then
+if (ps -p$PPID | \grep gnome-terminal > /dev/null) \
+    || (ps -p$PPID | \grep login > /dev/null); then
 	tmx main
 else
 	tmx intellij
