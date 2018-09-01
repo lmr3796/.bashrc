@@ -26,7 +26,8 @@ export PS1=$PS1'\[\033[1;37m\]\w\[\033[0;33m\]$(__git_ps1 " (%s)") \[\033[0;37m\
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-command -v thefuck && eval $(thefuck --alias)
+command -v thefuck > /devnull \
+	&& eval $(thefuck --alias)
 
 function dockerbash () {
 	docker exec -it $1 /bin/bash
