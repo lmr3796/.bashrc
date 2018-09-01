@@ -6,7 +6,9 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-
+if [[ $OSTYPE == 'darwin'* ]]; then # HOMEBREW python
+    PATH=/usr/local/opt/python/libexec/bin:$PATH
+fi
 PATH=$HOME/.local/bin:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/platform-tools:$PATH
 export PATH
 # export JAVA_HOME=$(/usr/libexec/java_home)    # for mac
