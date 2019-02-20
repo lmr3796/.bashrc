@@ -31,7 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Thefuck
-command -v thefuck > /devnull \
+command -v thefuck > /dev/null \
 	&& eval $(thefuck --alias)
 
 function dockerbash () {
