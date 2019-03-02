@@ -4,7 +4,7 @@
 
 ## BASH: this will run on each non-login and interactive shell.
 
-export TERM=xterm-256color
+export TERM=xterm-color
 export EDITOR=vim
 
 if [ -f $HOME/.git-prompt.sh ]; then
