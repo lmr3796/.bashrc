@@ -7,12 +7,14 @@
 #export TERM=xterm-color
 export EDITOR=vim
 
-if [ -f $HOME/.git-prompt.sh ]; then
-	source $HOME/.git-prompt.sh
-fi
-if [ -f $HOME/.git-completion.bash ]; then
-	source $HOME/.git-completion.bash
-fi
+for comp in \
+    $HOME/.git-prompt.sh \
+    $HOME/.git-completion.bash \
+    $HOME/.tmuxinator.bash \
+    ; do
+    source $comp
+done
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWCOLORHINTS="auto"
