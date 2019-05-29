@@ -20,6 +20,3 @@ if (ps -p$PPID | \grep gnome-terminal > /dev/null) \
 else
 	tmx intellij
 fi
-
-# Yahoo Yubikey
-export SSH_AUTH_SOCK=$HOME/.yubiagent/sock
