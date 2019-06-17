@@ -20,9 +20,12 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWCOLORHINTS="auto"
 export GIT_PS1_SHOWSTASHSTATE="true"
 export PS1='\[\033[01;32m\]\u@\h\[\033[1;37m\]:'
-if [ "x$YROOT_NAME" != "x" ]; then
-	PS1=$PS1'\[\033[0;33m\] [yroot: '$YROOT_NAME'] '
-fi
+
+# Yahoo YROOT
+#if [ "x$YROOT_NAME" != "x" ]; then
+#	PS1=$PS1'\[\033[0;33m\] [yroot: '$YROOT_NAME'] '
+#fi
+
 export PS1=$PS1'\[\033[1;37m\]\w\[\033[0;33m\]$(__git_ps1 " (%s)") \[\033[0;37m\]\$ '
 . $HOME/.bash_aliases
 
