@@ -12,9 +12,9 @@ export GOPATH="${HOME}/.go"
 export PATH=$PATH
 
 if [[ $OSTYPE == 'darwin'* ]]; then     # HOMEBREW python
-        PATH=$PATH:/usr/local/opt/python/libexec/bin
         export GOROOT="$(brew --prefix golang)/libexec"
         PATH="${PATH}:${GOROOT}/bin"
+        PATH=$PATH:/usr/local/opt/python/libexec/bin
 fi
 
 PATH="$HOME/.local/bin:$PATH"
