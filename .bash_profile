@@ -7,7 +7,6 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-export JAVA_HOME=$(/usr/libexec/java_home)    # for mac
 export GOPATH="${HOME}/.go"
 export PATH=$PATH
 
@@ -15,6 +14,8 @@ if [[ $OSTYPE == 'darwin'* ]]; then     # HOMEBREW python
         export GOROOT="$(brew --prefix golang)/libexec"
         PATH="${PATH}:${GOROOT}/bin"
         PATH=$PATH:/usr/local/opt/python/libexec/bin
+        
+        export JAVA_HOME=$(/usr/libexec/java_home)    # for mac
 fi
 
 PATH="$HOME/.local/bin:$PATH"
